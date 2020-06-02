@@ -28,6 +28,24 @@ public class Player {
     private Table table; //Tavolo in cui si trova il giocatore
 
     /**
+     * getId
+     * @return Id del giocatore
+     */
+    public Long getId() {
+        return id;
+    }
+
+    /**
+     * setId
+     * @param id identificatore univoco del giocatore
+     */
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+
+
+    /**
      * Costruttore vuoto sempre comodo
      */
     public Player() {
