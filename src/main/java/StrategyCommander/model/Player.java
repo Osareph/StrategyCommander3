@@ -24,6 +24,8 @@ public class Player {
 
     @ManyToOne
     private Game game; //Partita a cui partecipa il giocatore
+    @ManyToOne
+    private Table table; //Tavolo in cui si trova il giocatore
 
     /**
      * Costruttore vuoto sempre comodo

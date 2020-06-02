@@ -16,6 +16,6 @@ public class Game {
     private Long id; //id del gioco
 
     @OneToMany(mappedBy = "game")
-    private List<Player> players;//lista dei giocatori presenti 
+    private List<Player> players;//lista dei giocatori presenti
 
 }
