@@ -114,4 +114,12 @@ public class Player {
      */
     public Player() {
     }
+
+    /**
+     * Costruttore
+     */
+    public Player(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 }
