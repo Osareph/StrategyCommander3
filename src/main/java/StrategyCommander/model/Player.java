@@ -22,6 +22,9 @@ public class Player {
     @Column(nullable = false)
     private int point; //punti del giocatore
 
+    @ManyToOne
+    private Game game; //Partita a cui partecipa il giocatore
+
     /**
      * Costruttore vuoto sempre comodo
      */
