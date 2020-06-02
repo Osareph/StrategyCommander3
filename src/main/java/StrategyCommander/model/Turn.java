@@ -1,6 +1,7 @@
 package StrategyCommander.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Classe che rappresenta il singolo turno del torneo
@@ -16,4 +17,7 @@ public class Turn {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false)
     private Long id; //id del turno
+
+    @OneToMany(mappedBy = "turn")
+    private List<Table> tables; //elenco dei tavoli durante il turno
 }

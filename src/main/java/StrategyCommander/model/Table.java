@@ -24,4 +24,6 @@ public class Table {
     * Il numero di giocatori che può trovarsi ad un tavolo sono un minimo di 3 ed un massimo di 5
     */
 
+    @ManyToOne
+    private Turn turn; // turno in cui viene creato il tavolo
 }
