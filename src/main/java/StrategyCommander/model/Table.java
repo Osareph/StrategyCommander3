@@ -26,4 +26,72 @@ public class Table {
 
     @ManyToOne
     private Turn turn; // turno in cui viene creato il tavolo
+
+    //GETTER & SETTER
+
+    /**
+     * getId
+     * @return Id ritorna l'Id del tavolo
+     */
+    public Long getId() {
+        return id;
+    }
+
+    /**
+     * setId modifica l'Id del tavolo
+     * @param id identificatore attuale del tavolo
+     */
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    /**
+     * getTurn
+     * @return turn restituisce il turno in cui viene creato il tavolo da gioco
+     */
+    public Turn getTurn() {
+        return turn;
+    }
+
+    /**
+     * setTurn modifica il turno in cui si trova il tavolo
+     * @param turn turno in cui viene creato il tavolo
+     */
+    public void setTurn(Turn turn) {
+        this.turn = turn;
+    }
+
+    /**
+     * getPlayer
+     * @return players elenco dei giocatori al tavolo da gioco
+     */
+    public List<Player> getPlayers() {
+        return players;
+    }
+
+    /**
+     * setPlayers modifica l'elenco dei giocatori nel tavolo
+     * @param players
+     */
+    public void setPlayers(List<Player> players) {
+        this.players = players;
+    }
+
+    //COSTRUTTORI
+
+    /**
+     * Costruttore vuoto
+     */
+    public Table() {
+    }
+
+    /**
+     * costruttore
+     * @param id del tavolo
+     * @param turn turno in cui viene creato il tavolo
+     */
+    public Table(Long id, Turn turn) {
+        this.id = id;
+        this.turn = turn;
+    }
 }

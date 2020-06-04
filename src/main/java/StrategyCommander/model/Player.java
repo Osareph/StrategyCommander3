@@ -18,6 +18,9 @@ public class Player {
     private Long id; //id del giocatore
 
     @Column(nullable = false)
+    private String DCI;//rappresenta la DCI del giocatore
+
+    @Column(nullable = false)
     private String name; //nome del giocatore
 
     @Column(nullable = false)
@@ -38,11 +41,27 @@ public class Player {
     }
 
     /**
-     * setId
+     * setId modifica l'Id del giocatore
      * @param id identificatore univoco del giocatore
      */
     public void setId(Long id) {
         this.id = id;
+    }
+
+    /**
+     * getDCI
+     * @return ritorna la DCI del giocatore
+     */
+    public String getDCI() {
+        return DCI;
+    }
+
+    /**
+     * setDCI modifica la DCI del giocatore
+     * @param DCI attuale del giocatore
+     */
+    public void setDCI(String DCI) {
+        this.DCI = DCI;
     }
 
     /**
@@ -54,7 +73,7 @@ public class Player {
     }
 
     /**
-     * setName
+     * setName modifica il nome del giocatore
      * @param name nome del giocatore
      */
     public void setName(String name) {
@@ -70,7 +89,7 @@ public class Player {
     }
 
     /**
-     * setPoint
+     * setPoint modifica il punteggio del Giocatore
      * @param point punteggio in classifica del giocatore
      */
     public void setPoint(int point) {
@@ -86,7 +105,7 @@ public class Player {
     }
 
     /**
-     * setGame
+     * setGame modifica la partita in cui si trova il giocatore
      * @param game gioco in cui si trova il giocatore
      */
     public void setGame(Game game) {
@@ -102,12 +121,14 @@ public class Player {
     }
 
     /**
-     * setTable
+     * setTable modifica il tavolo in cui si trova il giocatore
      * @param table tavolo in cui si trova il giocatore
      */
     public void setTable(Table table) {
         this.table = table;
     }
+
+    //Costruttori
 
     /**
      * Costruttore vuoto sempre comodo
@@ -117,9 +138,15 @@ public class Player {
 
     /**
      * Costruttore
+     * @param id del giocatore
+     * @param name del giocatore
+     * @param DCI del giocatore
      */
-    public Player(Long id, String name) {
+    public Player(Long id, String name, String DCI) {
         this.id = id;
         this.name = name;
+        this.DCI = DCI;
     }
+
+
 }
