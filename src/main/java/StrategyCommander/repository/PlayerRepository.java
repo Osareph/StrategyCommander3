@@ -1,6 +1,5 @@
 package StrategyCommander.repository;
 
-import StrategyCommander.model.Game;
 import StrategyCommander.model.Player;
 import org.springframework.data.repository.CrudRepository;
 
@@ -19,6 +18,4 @@ public interface PlayerRepository extends CrudRepository<Player, Long> {
      * @return ritorna il giocatore con il nome indicato
      */
     public Player findByName(String name);
-
-    
 }
