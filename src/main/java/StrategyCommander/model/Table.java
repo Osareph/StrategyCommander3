@@ -112,6 +112,6 @@ public class Table {
     public Table(Long id, Turn turn, int number) {
         this.id = id;
         this.turn = turn;
-        this.number
+        this.number = number;
     }
 }
