@@ -18,6 +18,9 @@ public class Turn {
     @Column(nullable = false)
     private Long id; //id del turno
 
+    @Column(nullable = false)
+    private int number;//rappresenta il numero del turno, secondo identificatore per il turno
+
     /**
      * elenco dei tavoli presenti nel turno
      */
@@ -40,6 +43,22 @@ public class Turn {
      */
     public void setId(Long id) {
         this.id = id;
+    }
+
+    /**
+     * getNumber
+     * @return ritorna il numero del turno
+     */
+    public int getNumber() {
+        return number;
+    }
+
+    /**
+     * setNumber modifica il numero del turno
+     * @param number è il secondo indentificatore per il turno
+     */
+    public void setNumber(int number) {
+        this.number = number;
     }
 
     /**
@@ -70,7 +89,8 @@ public class Turn {
      * Costruttore
      * @param id identificatore del tavolo
      */
-    public Turn(Long id) {
+    public Turn(Long id, int number) {
         this.id = id;
+        this.number = number;
     }
 }
