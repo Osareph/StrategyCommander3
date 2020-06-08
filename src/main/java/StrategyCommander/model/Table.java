@@ -18,6 +18,9 @@ public class Table {
     @Column(nullable = false)
     private Long id; //id del tavolo
 
+    @Column(nullable = false)
+    private int number; //numero del tavolo , rappresenta un secondo identificativo per il tavolo
+
     @OneToMany(mappedBy = "table")
     private List<Player> players; //Elenco dei giocatori che sono al tavolo da gioco
     /*
@@ -43,6 +46,22 @@ public class Table {
      */
     public void setId(Long id) {
         this.id = id;
+    }
+
+    /**
+     * getNumber
+     * @return ritorna il numero del tavolo
+     */
+    public int getNumber() {
+        return number;
+    }
+
+    /**
+     * setNumber modifica il numero del tavolo
+     * @param number è un secondo identificativo per il tavolo
+     */
+    public void setNumber(int number) {
+        this.number = number;
     }
 
     /**
@@ -90,8 +109,9 @@ public class Table {
      * @param id del tavolo
      * @param turn turno in cui viene creato il tavolo
      */
-    public Table(Long id, Turn turn) {
+    public Table(Long id, Turn turn, int number) {
         this.id = id;
         this.turn = turn;
+        this.number
     }
 }
