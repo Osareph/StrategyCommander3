@@ -28,7 +28,7 @@ public class TableService {
      */
     @Transactional
     public Table addTable(Table table){
-        return tableRepository.save(table);
+        return this.tableRepository.save(table);
     }
 
     /**
@@ -38,7 +38,7 @@ public class TableService {
      */
     @Transactional
     public Table findById(Long id){
-        return tableRepository.findById(id).get();
+        return this.tableRepository.findById(id).get();
     }
 
     /**
@@ -48,7 +48,7 @@ public class TableService {
      */
     @Transactional
     public Table findByNumber(int number){
-        return tableRepository.findByNumber(number);
+        return this.tableRepository.findByNumber(number);
     }
 
     /**
@@ -58,7 +58,7 @@ public class TableService {
      */
     @Transactional
     public List<Table> findTablesByTurn(Turn turn){
-        return tableRepository.findAllByTurn(turn);
+        return this.tableRepository.findAllByTurn(turn);
     }
 
     /**
@@ -67,7 +67,7 @@ public class TableService {
      */
     @Transactional
     public void deleteTable(Long id){
-        tableRepository.deleteById(id);
+        this.tableRepository.deleteById(id);
     }
 
     /**
@@ -76,7 +76,7 @@ public class TableService {
      */
     @Transactional
     public void deleteAllTableFromTurn(Turn turn){
-        tableRepository.deleteAllByTurn(turn);
+        this.tableRepository.deleteAllByTurn(turn);
     }
 
 }

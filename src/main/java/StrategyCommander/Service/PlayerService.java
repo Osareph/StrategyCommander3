@@ -29,7 +29,7 @@ public class PlayerService {
      */
     @Transactional
     public Player addPlayer(Player player){
-        return playerRepository.save(player);
+        return this.playerRepository.save(player);
     }
 
     /**
@@ -39,7 +39,7 @@ public class PlayerService {
      */
     @Transactional
     public Player findPlayerById(Long id){
-        return (Player)playerRepository.findById(id).get();
+        return (Player)this.playerRepository.findById(id).get();
     }
 
     /**
@@ -49,7 +49,7 @@ public class PlayerService {
      */
     @Transactional
     public Player findPlayerByName(String name){
-        return playerRepository.findByName(name);
+        return this.playerRepository.findByName(name);
     }
 
     /**
@@ -59,7 +59,7 @@ public class PlayerService {
      */
     @Transactional
     public Player findPlayerByDCI(String DCI){
-        return playerRepository.findByDCI(DCI);
+        return this.playerRepository.findByDCI(DCI);
     }
 
     /**
@@ -69,7 +69,7 @@ public class PlayerService {
      */
     @Transactional
     public List<Player> findAllPlayerByGame(Game game){
-        return playerRepository.findAllByGame(game);
+        return this.playerRepository.findAllByGame(game);
     }
 
     /**
@@ -79,7 +79,7 @@ public class PlayerService {
      */
     @Transactional
     public List<Player> findAllPlayerByTable(Table table){
-        return playerRepository.findAllByTable(table);
+        return this.playerRepository.findAllByTable(table);
     }
 
     /**
@@ -88,7 +88,7 @@ public class PlayerService {
      */
     @Transactional
     public void deletePlayer(Long id){
-        playerRepository.deleteById(id);
+        this.playerRepository.deleteById(id);
     }
 
     /**
@@ -97,9 +97,9 @@ public class PlayerService {
      */
     @Transactional
     public void removePlayerFromGame(Player player){
-        Player tmp = playerRepository.findByDCI(player.getDCI());
+        Player tmp = this.playerRepository.findByDCI(player.getDCI());
         tmp.setGame(null);
-        playerRepository.save(tmp);
+        this.playerRepository.save(tmp);
     }
 
     /**
@@ -108,9 +108,9 @@ public class PlayerService {
      */
     @Transactional
     public void removePlayerFromTable(Player player){
-        Player tmp = playerRepository.findByDCI(player.getDCI());
+        Player tmp = this.playerRepository.findByDCI(player.getDCI());
         player.setTable(null);
-        playerRepository.save(tmp);
+        this.playerRepository.save(tmp);
     }
 
 
