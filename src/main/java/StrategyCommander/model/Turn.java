@@ -27,6 +27,12 @@ public class Turn {
     @OneToMany(mappedBy = "turn")
     private List<Table> tables; //elenco dei tavoli durante il turno
 
+    /**
+     * Torneo in cui viene creato il turno
+     */
+    @ManyToOne
+    private Game game;//rappresenta il torneo in cui il turno è definito
+
     //GETTER & SETTER
 
     /**
@@ -75,6 +81,22 @@ public class Turn {
      */
     public void setTables(List<Table> tables) {
         this.tables = tables;
+    }
+
+    /**
+     * GetGame
+     * @return il torneo in cui il turno viene generato
+     */
+    public Game getGame() {
+        return game;
+    }
+
+    /**
+     * setGame modifica il torneo in cui viene creato il turno
+     * @param game Torneo in cui viene creato il turno
+     */
+    public void setGame(Game game) {
+        this.game = game;
     }
 
     //COSTRUTTORI

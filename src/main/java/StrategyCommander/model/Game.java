@@ -21,6 +21,11 @@ public class Game {
     @OneToMany(mappedBy = "game")
     private List<Player> players;//lista dei giocatori presenti
 
+    /**
+     * Elenco dei turni del Torneo
+     */
+    @OneToMany(mappedBy = "game")
+    private List<Turn> turns;//lista dei turni del torneo
     //GETTER & SETTER
 
     /**
@@ -53,6 +58,22 @@ public class Game {
      */
     public void setPlayers(List<Player> players) {
         this.players = players;
+    }
+
+    /**
+     * getTurns
+     * @return la lista dei turni di un torneo
+     */
+    public List<Turn> getTurns() {
+        return turns;
+    }
+
+    /**
+     * setTurns modifica la lista dei turni di un torneo
+     * @param turns elenco dei turni del torneo
+     */
+    public void setTurns(List<Turn> turns) {
+        this.turns = turns;
     }
 
     //COSTRUTTORI
