@@ -20,7 +20,7 @@ public class PlayerService {
      * dichiarazione del gestore della repository
      */
     @Autowired
-    PlayerRepository playerRepository;
+    private PlayerRepository playerRepository;
 
     /**
      * metodo che aggiunge alla repository il giocatore

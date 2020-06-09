@@ -19,7 +19,7 @@ public class TableService {
      * interfaccia per la gestione della repository di un tavolo
      */
     @Autowired
-    TableRepository tableRepository;
+    private TableRepository tableRepository;
 
     /**
      * Aggiunge il tavolo indicato alla repository
@@ -78,5 +78,5 @@ public class TableService {
     public void deleteAllTableFromTurn(Turn turn){
         tableRepository.deleteAllByTurn(turn);
     }
-    
+
 }
