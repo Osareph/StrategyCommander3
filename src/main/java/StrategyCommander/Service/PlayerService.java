@@ -110,7 +110,7 @@ public class PlayerService {
     public void removePlayerFromTable(Player player){
         Player tmp = playerRepository.findByDCI(player.getDCI());
         player.setTable(null);
-        playerRepository.save(tmp)
+        playerRepository.save(tmp);
     }
 
 
