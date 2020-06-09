@@ -7,6 +7,9 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
+/**
+ * Interfaccia che aiuta l'inizzializzazione della repository del giocatore
+ */
 public interface PlayerRepository extends CrudRepository<Player, Long> {
 
     /**

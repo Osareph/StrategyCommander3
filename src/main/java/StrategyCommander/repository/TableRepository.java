@@ -3,6 +3,9 @@ package StrategyCommander.repository;
 import StrategyCommander.model.Table;
 import org.springframework.data.repository.CrudRepository;
 
+/**
+ *Interfaccia che aiuta l'inizzializzazione della repository del Tavolo
+ */
 public interface TableRepository extends CrudRepository<Table, Long> {
 
     /**

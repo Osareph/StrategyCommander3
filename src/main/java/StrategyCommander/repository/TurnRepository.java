@@ -3,6 +3,9 @@ package StrategyCommander.repository;
 import StrategyCommander.model.Turn;
 import org.springframework.data.repository.CrudRepository;
 
+/**
+ *Interfaccia che aiuta l'inizzializzazione della repository del Turno
+ */
 public interface TurnRepository extends CrudRepository<Turn, Long> {
     /**
      * ricerca il turno tramite il numero
