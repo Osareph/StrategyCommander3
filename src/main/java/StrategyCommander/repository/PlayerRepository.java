@@ -39,4 +39,10 @@ public interface PlayerRepository extends CrudRepository<Player, Long> {
      * @return ritorna la lista del tavolo
      */
     public List<Player> findAllByTable(Table table);
+
+    /**
+     * Cancella il giocatore con l'Id indicato
+     * @param id identificatore del giocatore
+     */
+    void deleteById(Long id);
 }
