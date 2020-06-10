@@ -18,6 +18,14 @@ public interface TurnRepository extends CrudRepository<Turn, Long> {
     public Turn findByNumber(int number);
 
     /**
+     * ricerca il turno tramite il suo numero ma esclusivamente all'interno di un torneo
+     * @param number numero del turno da cercare
+     * @param game torneo in cui si svolge il turno
+     * @return il turno che possiede il numero indicato e che si trova all'interno del torneo indicato
+     */
+    public Turn findByNumberAndGame(int number, Game game);
+
+    /**
      * ricerca la lista dei turni che sono in un singolo torneo
      * @param game torneo a cui appartengono i turni
      * @return elenco dei turni che compongono il torneo
