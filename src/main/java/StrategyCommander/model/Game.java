@@ -26,6 +26,10 @@ public class Game {
      */
     @OneToMany(mappedBy = "game")
     private List<Turn> turns;//lista dei turni del torneo
+
+    @ManyToOne
+    private Utente utente;//utente che ha creato il torneo
+
     //GETTER & SETTER
 
     /**
@@ -74,6 +78,22 @@ public class Game {
      */
     public void setTurns(List<Turn> turns) {
         this.turns = turns;
+    }
+
+    /**
+     * getUtente
+     * @return l'utente che ha creato il torneo
+     */
+    public Utente getUtente() {
+        return utente;
+    }
+
+    /**
+     * setUtente modifica l'utente che ha creato il torneo
+     * @param utente che ha creato il torneo
+     */
+    public void setUtente(Utente utente) {
+        this.utente = utente;
     }
 
     //COSTRUTTORI
